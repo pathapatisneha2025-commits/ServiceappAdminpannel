@@ -30,6 +30,35 @@ const styles = `
   .form-group label { font-size: 12px; font-weight: 600; color: #64748b; }
   .form-group input, .form-group select { padding: 8px; border: 1px solid #e2e8f0; border-radius: 6px; }
   .save-btn { grid-column: span 2; background: #1e3a8a; color: white; border: none; padding: 12px; border-radius: 8px; margin-top: 10px; cursor: pointer; font-weight: 600; }
+  @media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .modal-box {
+    width: 95%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
 `;
 
 const BookingsManager = () => {

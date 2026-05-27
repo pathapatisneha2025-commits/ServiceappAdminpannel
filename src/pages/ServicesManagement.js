@@ -38,19 +38,37 @@ const styles = `
     gap: 12px;
   }
 
+  /* 👉 THIS is the key improvement */
+  .modal-overlay {
+    align-items: flex-end;
+  }
+
   .modal-content {
-    width: 95%;
+    width: 100%;
+    max-width: 100%;
+    height: 85vh;
+    border-radius: 20px 20px 0 0;
     padding: 20px;
+    overflow-y: auto;
+    animation: slideUp 0.25s ease-out;
   }
 
   .grid-form {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+  .submit-btn {
+    grid-column: span 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 `;
