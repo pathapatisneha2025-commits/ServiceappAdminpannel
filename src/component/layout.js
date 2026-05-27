@@ -30,10 +30,40 @@ const handleLogout = () => {
     <div style={styles.container}>
       {/* Global CSS for resets */}
       <style>{`
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7fe; }
-        * { box-sizing: border-box; }
-      `}</style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fe;
+  }
 
+  * { box-sizing: border-box; }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      width: 100% !important;
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .stats {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .main {
+      padding: 15px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats {
+      grid-template-columns: 1fr !important;
+    }
+  }
+`}</style>
       {/* SIDEBAR */}
       <aside style={styles.sidebar}>
         <div style={styles.logo}>

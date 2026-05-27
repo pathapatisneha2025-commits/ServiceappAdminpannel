@@ -27,6 +27,32 @@ const styles = `
   .icon-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
   .icon-box { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid #e2e8f0; font-size: 18px; }
   .icon-box.selected { border: 2px solid #1e3a8a; background: #eef2ff; }
+  @media (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .grid-form {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
 `;
 
 const iconList = [

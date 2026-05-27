@@ -45,6 +45,26 @@ const styles = `
   .approve-btn:hover { background-color: #1d4ed8; }
   .reject-btn { background-color: #ef4444; color: white; }
   .reject-btn:hover { background-color: #b91c1c; }
+
+  @media (max-width: 768px) {
+  .main {
+    padding: 16px;
+  }
+
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  img {
+    max-width: 60px;
+  }
+}
 `;
 
 const ProviderManagement = () => {

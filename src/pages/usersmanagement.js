@@ -104,6 +104,32 @@ const styles = `
     font-weight: 500;
   }
 
+  @media (max-width: 768px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}
+
   .status-active { background: #dcfce7; color: #166534; }
   .status-inactive { background: #f1f5f9; color: #475569; }
 `;
