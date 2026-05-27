@@ -43,7 +43,7 @@ export default function AdminWallet() {
 
   return (
     <div className="page">
-      <div className="card">
+      <div className="container">
         <h2 className="title">Admin Wallet Update</h2>
 
         <input
@@ -74,20 +74,17 @@ export default function AdminWallet() {
         /* ================= PAGE ================= */
         .page {
           min-height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 16px;
           background: #f3f6fb;
+          padding: 20px;
         }
 
-        /* ================= CARD (FIXED MOBILE FEEL) ================= */
-        .card {
-          width: 100%;
+        /* SAME WIDTH FOR MOBILE + WEB */
+        .container {
           max-width: 420px;
+          margin: 80px auto 0 auto;
           background: #fff;
-          border-radius: 16px;
           padding: 26px;
+          border-radius: 16px;
           box-shadow: 0 12px 30px rgba(0,0,0,0.08);
         }
 
@@ -99,11 +96,10 @@ export default function AdminWallet() {
           color: #1e3a8a;
         }
 
-        /* ================= INPUT (BIGGER MOBILE FRIENDLY) ================= */
         .input {
           width: 100%;
-          padding: 16px;          /* ⬅ bigger touch area */
-          font-size: 17px;        /* ⬅ no zoom + better readability */
+          padding: 16px;
+          font-size: 17px;
           border: 1px solid #d0d5dd;
           border-radius: 12px;
           outline: none;
@@ -116,7 +112,6 @@ export default function AdminWallet() {
           box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.12);
         }
 
-        /* ================= BUTTON (MORE TOUCH FRIENDLY) ================= */
         .button {
           width: 100%;
           padding: 16px;
@@ -129,16 +124,11 @@ export default function AdminWallet() {
           cursor: pointer;
         }
 
-        .button:active {
-          transform: scale(0.98);
-        }
-
         .button:disabled {
           background: #94a3b8;
           cursor: not-allowed;
         }
 
-        /* ================= MESSAGE ================= */
         .message {
           margin-top: 16px;
           font-size: 14px;
@@ -157,32 +147,7 @@ export default function AdminWallet() {
           color: #b91c1c;
         }
 
-        /* ================= MOBILE OPTIMIZATION ================= */
-        @media (max-width: 480px) {
-          .page {
-            align-items: flex-start;
-            padding-top: 40px;
-          }
-
-          .card {
-            padding: 22px;
-            border-radius: 14px;
-          }
-
-          .title {
-            font-size: 19px;
-          }
-
-          .input {
-            font-size: 18px;
-            padding: 18px;
-          }
-
-          .button {
-            padding: 18px;
-            font-size: 16px;
-          }
-        }
+        /* ❌ NO MOBILE RESTRUCTURE AT ALL */
       `}</style>
     </div>
   );
