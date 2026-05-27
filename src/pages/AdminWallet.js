@@ -81,53 +81,52 @@ export default function AdminWallet() {
           background: #f3f6fb;
         }
 
-        /* ================= CARD ================= */
+        /* ================= CARD (FIXED MOBILE FEEL) ================= */
         .card {
           width: 100%;
           max-width: 420px;
           background: #fff;
-          border-radius: 14px;
-          padding: 22px;
-          box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+          border-radius: 16px;
+          padding: 26px;
+          box-shadow: 0 12px 30px rgba(0,0,0,0.08);
         }
 
         .title {
-          font-size: 18px;
-          font-weight: 600;
+          font-size: 20px;
+          font-weight: 700;
           text-align: center;
-          margin-bottom: 18px;
+          margin-bottom: 22px;
           color: #1e3a8a;
         }
 
-        /* ================= INPUT ================= */
+        /* ================= INPUT (BIGGER MOBILE FRIENDLY) ================= */
         .input {
           width: 100%;
-          padding: 14px;
-          font-size: 16px; /* important: prevents iOS zoom issue */
+          padding: 16px;          /* ⬅ bigger touch area */
+          font-size: 17px;        /* ⬅ no zoom + better readability */
           border: 1px solid #d0d5dd;
-          border-radius: 10px;
+          border-radius: 12px;
           outline: none;
-          margin-bottom: 14px;
+          margin-bottom: 16px;
           box-sizing: border-box;
         }
 
         .input:focus {
           border-color: #1e3a8a;
-          box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+          box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.12);
         }
 
-        /* ================= BUTTON ================= */
+        /* ================= BUTTON (MORE TOUCH FRIENDLY) ================= */
         .button {
           width: 100%;
-          padding: 14px;
+          padding: 16px;
           background: #1e3a8a;
           color: white;
           border: none;
-          border-radius: 10px;
-          font-size: 15px;
+          border-radius: 12px;
+          font-size: 16px;
           font-weight: 600;
           cursor: pointer;
-          transition: 0.2s;
         }
 
         .button:active {
@@ -141,11 +140,11 @@ export default function AdminWallet() {
 
         /* ================= MESSAGE ================= */
         .message {
-          margin-top: 14px;
+          margin-top: 16px;
           font-size: 14px;
           text-align: center;
-          padding: 10px;
-          border-radius: 8px;
+          padding: 12px;
+          border-radius: 10px;
         }
 
         .success {
@@ -158,7 +157,7 @@ export default function AdminWallet() {
           color: #b91c1c;
         }
 
-        /* ================= MOBILE FIX ================= */
+        /* ================= MOBILE OPTIMIZATION ================= */
         @media (max-width: 480px) {
           .page {
             align-items: flex-start;
@@ -166,12 +165,22 @@ export default function AdminWallet() {
           }
 
           .card {
-            padding: 18px;
-            border-radius: 12px;
+            padding: 22px;
+            border-radius: 14px;
           }
 
           .title {
-            font-size: 17px;
+            font-size: 19px;
+          }
+
+          .input {
+            font-size: 18px;
+            padding: 18px;
+          }
+
+          .button {
+            padding: 18px;
+            font-size: 16px;
           }
         }
       `}</style>
