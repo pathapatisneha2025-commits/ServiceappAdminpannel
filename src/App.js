@@ -13,7 +13,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         {/* Redirect root to admin dashboard */}
-        <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
                   <Route path="login" element={<AdminLogin />} />
 
         {/* Admin layout with nested routes */}
