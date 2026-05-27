@@ -26,7 +26,7 @@ const AdminCoupons = () => {
     }
   };
 
-  // ✅ Proper date format (mobile + web)
+  // ✅ Proper date format
   const formatDate = (date) => {
     if (!date) return '-';
     const d = new Date(date);
@@ -166,6 +166,7 @@ const AdminCoupons = () => {
           value={editingCoupon ? editingCoupon.code : formData.code}
           onChange={handleChange}
           required
+          className="input"
         />
 
         <input
@@ -175,6 +176,7 @@ const AdminCoupons = () => {
           value={editingCoupon ? editingCoupon.discount_percent : formData.discount_percent}
           onChange={handleChange}
           required
+          className="input"
         />
 
         <input
@@ -184,6 +186,7 @@ const AdminCoupons = () => {
           value={editingCoupon ? editingCoupon.usage_limit : formData.usage_limit}
           onChange={handleChange}
           required
+          className="input"
         />
 
         <input
@@ -191,6 +194,7 @@ const AdminCoupons = () => {
           type="date"
           value={editingCoupon ? editingCoupon.start_date : formData.start_date}
           onChange={handleChange}
+          className="input"
         />
 
         <input
@@ -198,6 +202,7 @@ const AdminCoupons = () => {
           type="date"
           value={editingCoupon ? editingCoupon.end_date : formData.end_date}
           onChange={handleChange}
+          className="input"
         />
 
         <button type="submit" disabled={loading}>
@@ -219,8 +224,8 @@ const AdminCoupons = () => {
               <th>Code</th>
               <th>Discount</th>
               <th>Used/Limit</th>
-              <th>Start Date</th>
-              <th>End Date</th>
+              <th>Start</th>
+              <th>End</th>
               <th>Active</th>
               <th>Actions</th>
             </tr>
@@ -232,8 +237,8 @@ const AdminCoupons = () => {
                 <td data-label="Code">{c.code}</td>
                 <td data-label="Discount">{c.discount_percent}%</td>
                 <td data-label="Used/Limit">{c.used_count} / {c.usage_limit}</td>
-                <td data-label="Start Date">{formatDate(c.start_date)}</td>
-                <td data-label="End Date">{formatDate(c.end_date)}</td>
+                <td data-label="Start">{formatDate(c.start_date)}</td>
+                <td data-label="End">{formatDate(c.end_date)}</td>
                 <td data-label="Active">{c.is_active ? 'Yes' : 'No'}</td>
 
                 <td data-label="Actions">
@@ -261,10 +266,12 @@ const AdminCoupons = () => {
           margin-bottom: 30px;
         }
 
-        input {
-          padding: 10px;
+        .input {
+          width: 100%;
+          padding: 12px;
+          font-size: 16px;
           border: 1px solid #ccc;
-          border-radius: 6px;
+          border-radius: 8px;
         }
 
         button {
@@ -327,6 +334,11 @@ const AdminCoupons = () => {
             content: attr(data-label);
             font-weight: 600;
             color: #555;
+          }
+
+          .input {
+            font-size: 16px;
+            padding: 14px;
           }
 
           button {
